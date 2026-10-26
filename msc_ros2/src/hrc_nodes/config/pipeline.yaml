@@ -1,0 +1,45 @@
+stvl53l7cx_driver:
+  ros__parameters:
+    udp_bind: "0.0.0.0"
+    udp_port: 8888
+human_detection:
+  ros__parameters:
+    model_file: "/absolute/path/model.pt"
+    scaler_x_file: "/absolute/path/scaler_x.joblib"
+    scaler_distance_file: "/absolute/path/scaler_distance.joblib"
+    reference_csv: "/absolute/path/normal_zone_reference.csv"
+    robot_ip: "192.168.1.102"
+    device: "cpu"
+    distance_threshold: 3.0
+    cluster_size: 3
+    on_window: 2
+    on_required: 1
+    off_required: 5
+sensor_health:
+  ros__parameters:
+    minimum_hz: 15.0
+    window_s: 1.0
+    stale_s: 0.10
+speed_scaling:
+  ros__parameters:
+    tr_s: 0.1865
+    ts_s: 0.100
+    c_m: 0.100
+    zr_m: 0.0001
+    zd_fraction: 0.14
+    vmax_mps: 2.0
+    safety_factor: 1.2
+    speed_step_mps: 0.001
+decision_making:
+  ros__parameters:
+    enable_robot: false
+    input_timeout_s: 0.2
+    service_timeout_s: 0.2
+    speed_service: "/io_and_status_controller/set_speed_slider"
+led_lighting:
+  ros__parameters:
+    serial_port: ""
+    baudrate: 115200
+    pixel_count: 60
+    near_mm: 100.0
+    far_mm: 1000.0

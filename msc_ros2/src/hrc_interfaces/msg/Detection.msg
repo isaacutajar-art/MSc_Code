@@ -1,0 +1,9 @@
+std_msgs/Header header
+uint32 packet_seq
+bool valid
+bool human_detected
+bool temporally_held
+float64 distance_mm
+float64 velocity_mps
+uint8 sensor_id
+int32 track_id
